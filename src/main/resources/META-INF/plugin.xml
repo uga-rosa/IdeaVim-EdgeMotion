@@ -1,18 +1,19 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.ugarosa.ideavimedgemotion</id>
+    <id>com.github.ugarosa.idea.edgemotion</id>
     <name>IdeaVim-EdgeMotion</name>
     <vendor>uga-rosa</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>IdeaVIM</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.ugarosa.ideavimedgemotion.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+    <extensions defaultExtensionNs="IdeaVIM">
+        <vimExtension implementation="com.github.ugarosa.idea.edgemotion.EdgeMotionExtension" name="edgemotion">
+            <aliases>
+                <alias name="https://github.com/haya14busa/vim-edgemotion"/>
+                <alias name="haya14busa/vim-edgemotion"/>
+                <alias name="vim-edgemotioni"/>
+            </aliases>
+        </vimExtension>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.ugarosa.ideavimedgemotion.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>
