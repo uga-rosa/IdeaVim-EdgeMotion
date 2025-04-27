@@ -40,7 +40,7 @@ dependencies {
     intellijPlatform {
         create(platformType, platformVersion)
 
-        plugin("IdeaVIM:2.22.0")
+        plugin("IdeaVIM:2.16.0")
 
         pluginVerifier()
         zipSigner()
@@ -53,7 +53,7 @@ dependencies {
 intellijPlatform {
     pluginConfiguration {
         name = providers.gradleProperty("pluginName")
-        version = providers.gradleProperty("pluginVersion")
+        version = providers.gradleProperty("version")
 
         // Extract the <!-- Plugin description --> section from README.md and provide for the plugin's manifest
         description = providers.fileContents(layout.projectDirectory.file("README.md")).asText.map {
