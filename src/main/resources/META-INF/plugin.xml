@@ -4,7 +4,8 @@
     <name>IdeaVim-EdgeMotion</name>
     <vendor>uga-rosa</vendor>
     <description>
-        EdgeMotion for IdeaVim<br/>
+        EdgeMotion for IdeaVim
+        <br/>
         Ported from [vim-edgemotion](https://github.com/haya14busa/vim-edgemotion)
     </description>
 
@@ -14,8 +15,6 @@
     <extensions defaultExtensionNs="IdeaVIM">
         <vimExtension implementation="com.ugarosa.idea.edgemotion.EdgeMotionExtension" name="edgemotion">
             <aliases>
-                <alias name="https://github.com/haya14busa/vim-edgemotion"/>
-                <alias name="haya14busa/vim-edgemotion"/>
                 <alias name="vim-edgemotioni"/>
             </aliases>
         </vimExtension>
