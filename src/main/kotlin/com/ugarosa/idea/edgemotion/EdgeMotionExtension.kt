@@ -1,4 +1,4 @@
-package com.github.ugarosa.idea.edgemotion
+package com.ugarosa.idea.edgemotion
 
 import com.maddyhome.idea.vim.VimPlugin
 import com.maddyhome.idea.vim.api.ExecutionContext
@@ -77,7 +77,7 @@ class EdgeMotionExtension : VimExtension {
         }
 
         // A `Land` consists of non-whitespace characters or whitespace characters sandwiched between non-whitespace.
-        fun inInLand(editor: VimEditor, lnum: Int, col: Int): Boolean {
+        private fun inInLand(editor: VimEditor, lnum: Int, col: Int): Boolean {
             val line = editor.getLineText(lnum)
             if (col < 0 || col >= line.length) return false
             val char = line[col]
@@ -89,6 +89,6 @@ class EdgeMotionExtension : VimExtension {
             return !isWhite(prev) && !isWhite(next)
         }
 
-        fun isWhite(char: Char) = char == ' ' || char == '\t'
+        private fun isWhite(char: Char) = char == ' ' || char == '\t'
     }
 }
